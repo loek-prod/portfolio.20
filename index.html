@@ -1,0 +1,289 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2822
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\froman\fcharset0 Times-Roman;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;}
+{\*\expandedcolortbl;;\cssrgb\c0\c0\c0;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww30040\viewh16380\viewkind0
+\deftab720
+\pard\pardeftab720\sa240\partightenfactor0
+
+\f0\fs24 \cf0 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec2 <!DOCTYPE html>\
+<html lang="nl">\
+<head>\
+  <meta charset="UTF-8">\
+  <meta name="viewport" content="width=device-width, initial-scale=1">\
+  <title>Loek Lutgens \'96 Portfolio</title>\
+  <meta name="description" content="Portfolio van fotograaf/videomaker Loek Lutgens">\
+  <style>\
+    /* --- BASIS --- */\
+    :root \{\
+      --bg: #111;\
+      --fg: #fff;\
+      --accent: #fff;\
+      --muted: #888;\
+      --font-serif: 'Georgia', serif;\
+      --font-sans: 'Arial', 'Helvetica Neue', sans-serif;\
+      --transition: 0.3s cubic-bezier(.4,0,.2,1);\
+    \}\
+    html, body \{\
+      margin: 0; padding: 0;\
+      background: var(--bg);\
+      color: var(--fg);\
+      font-family: var(--font-serif);\
+      scroll-behavior: smooth;\
+    \}\
+    body \{\
+      min-height: 100vh;\
+      display: flex;\
+      flex-direction: column;\
+    \}\
+    a \{ color: var(--accent); text-decoration: none; transition: color var(--transition);\}\
+    a:hover \{ color: var(--muted);\}\
+    h1, h2, h3 \{\
+      font-family: var(--font-serif);\
+      letter-spacing: 0.01em;\
+      margin: 0 0 0.5em 0;\
+    \}\
+    p \{ line-height: 1.6; margin: 0 0 1.5em 0;\}\
+    /* --- HERO --- */\
+    .hero \{\
+      position: relative;\
+      min-height: 100vh;\
+      display: flex;\
+      align-items: center;\
+      justify-content: center;\
+      text-align: center;\
+      overflow: hidden;\
+      background: #000;\
+    \}\
+    .hero-bg \{\
+      position: absolute;\
+      inset: 0;\
+      width: 100vw; height: 100vh;\
+      object-fit: cover;\
+      z-index: 0;\
+      filter: brightness(0.7) grayscale(0.2);\
+      transition: filter var(--transition);\
+    \}\
+    .hero-content \{\
+      position: relative;\
+      z-index: 1;\
+      color: var(--fg);\
+      display: flex;\
+      flex-direction: column;\
+      align-items: center;\
+      justify-content: center;\
+      gap: 1.5em;\
+    \}\
+    .hero-logo \{\
+      font-size: 2.5rem;\
+      font-family: var(--font-serif);\
+      letter-spacing: 0.1em;\
+      background: rgba(0,0,0,0.4);\
+      padding: 0.5em 1.5em;\
+      border-radius: 2em;\
+      font-weight: bold;\
+      box-shadow: 0 2px 16px rgba(0,0,0,0.2);\
+      margin-bottom: 0.5em;\
+      transition: background var(--transition);\
+    \}\
+    .hero-text \{\
+      font-size: 1.2rem;\
+      max-width: 30em;\
+      background: rgba(0,0,0,0.3);\
+      padding: 1em 2em;\
+      border-radius: 1em;\
+      font-family: var(--font-sans);\
+      font-weight: 300;\
+      letter-spacing: 0.02em;\
+      margin: 0 auto;\
+    \}\
+    /* --- PORTFOLIO --- */\
+    .portfolio \{\
+      padding: 5vw 0 2vw 0;\
+      max-width: 1200px;\
+      margin: 0 auto;\
+      width: 90vw;\
+    \}\
+    .portfolio-grid \{\
+      display: grid;\
+      grid-template-columns: repeat(3, 1fr);\
+      gap: 2vw;\
+    \}\
+    .portfolio-item \{\
+      position: relative;\
+      overflow: hidden;\
+      border-radius: 1em;\
+      box-shadow: 0 2px 16px rgba(0,0,0,0.15);\
+      cursor: pointer;\
+      transition: transform var(--transition), box-shadow var(--transition);\
+      aspect-ratio: 4/5;\
+      background: #222;\
+    \}\
+    .portfolio-item:hover \{\
+      transform: scale(1.025);\
+      box-shadow: 0 8px 32px rgba(0,0,0,0.25);\
+      z-index: 2;\
+    \}\
+    .portfolio-item img,\
+    .portfolio-item video \{\
+      width: 100%; height: 100%;\
+      object-fit: cover;\
+      display: block;\
+      transition: filter var(--transition);\
+      filter: grayscale(0.1) brightness(0.95);\
+    \}\
+    .portfolio-item:hover img,\
+    .portfolio-item:hover video \{\
+      filter: grayscale(0) brightness(1.1);\
+    \}\
+    /* --- ABOUT --- */\
+    .about \{\
+      max-width: 700px;\
+      margin: 8vw auto 6vw auto;\
+      padding: 0 2vw;\
+      text-align: center;\
+    \}\
+    .about h2 \{\
+      font-size: 2.2rem;\
+      margin-bottom: 0.5em;\
+      font-family: var(--font-serif);\
+      letter-spacing: 0.05em;\
+    \}\
+    .about p \{\
+      font-size: 1.1rem;\
+      color: var(--muted);\
+      font-family: var(--font-sans);\
+      font-weight: 400;\
+      margin-bottom: 0;\
+    \}\
+    /* --- CONTACT --- */\
+    .contact \{\
+      background: #181818;\
+      color: var(--fg);\
+      padding: 3vw 0 2vw 0;\
+      text-align: center;\
+      font-family: var(--font-sans);\
+      letter-spacing: 0.02em;\
+    \}\
+    .contact a \{\
+      margin: 0 0.5em;\
+      font-weight: bold;\
+      font-size: 1.1em;\
+    \}\
+    /* --- STICKY BUTTON --- */\
+    .sticky-btn \{\
+      position: fixed;\
+      bottom: 2vw; right: 2vw;\
+      background: #fff;\
+      color: #111;\
+      border: none;\
+      border-radius: 50%;\
+      width: 56px; height: 56px;\
+      box-shadow: 0 2px 16px rgba(0,0,0,0.18);\
+      font-size: 2rem;\
+      display: flex; align-items: center; justify-content: center;\
+      cursor: pointer;\
+      z-index: 100;\
+      opacity: 0.85;\
+      transition: background var(--transition), color var(--transition), opacity var(--transition);\
+    \}\
+    .sticky-btn:hover \{\
+      background: #111;\
+      color: #fff;\
+      opacity: 1;\
+    \}\
+    /* --- RESPONSIVE --- */\
+    @media (max-width: 900px) \{\
+      .portfolio-grid \{ grid-template-columns: 1fr 1fr; \}\
+    \}\
+    @media (max-width: 600px) \{\
+      .portfolio-grid \{ grid-template-columns: 1fr; \}\
+      .hero-logo \{ font-size: 1.5rem; \}\
+      .hero-text \{ font-size: 1rem; padding: 1em; \}\
+      .about h2 \{ font-size: 1.3rem; \}\
+    \}\
+  </style>\
+</head>\
+<body>\
+  <!-- HERO -->\
+  <section class="hero" id="hero">\
+    <!-- Gebruik een video of afbeelding als achtergrond -->\
+    <video class="hero-bg" src="media/hero.mp4" autoplay loop muted playsinline poster="media/hero.jpg"></video>\
+    <!-- <img class="hero-bg" src="media/hero.jpg" alt="Hero background"> -->\
+    <div class="hero-content">\
+      <div class="hero-logo">Loek Lutgens</div>\
+      <div class="hero-text">Fotograaf &amp; videomaker \'96 minimalisme, natuur, mens. Scroll naar beneden om mijn werk te ontdekken.</div>\
+    </div>\
+  </section>\
+\
+  <!-- PORTFOLIO -->\
+  <section class="portfolio" id="portfolio">\
+    <div class="portfolio-grid">\
+      <!-- Vervang deze items door je eigen werk -->\
+      <div class="portfolio-item">\
+        <img src="media/photo1.jpg" alt="Portfolio foto 1" loading="lazy">\
+      </div>\
+      <div class="portfolio-item">\
+        <video src="media/video1.mp4" poster="media/video1.jpg" muted loop playsinline></video>\
+      </div>\
+      <div class="portfolio-item">\
+        <img src="media/photo2.jpg" alt="Portfolio foto 2" loading="lazy">\
+      </div>\
+      <div class="portfolio-item">\
+        <img src="media/photo3.jpg" alt="Portfolio foto 3" loading="lazy">\
+      </div>\
+      <div class="portfolio-item">\
+        <video src="media/video2.mp4" poster="media/video2.jpg" muted loop playsinline></video>\
+      </div>\
+      <div class="portfolio-item">\
+        <img src="media/photo4.jpg" alt="Portfolio foto 4" loading="lazy">\
+      </div>\
+    </div>\
+  </section>\
+\
+  <!-- ABOUT -->\
+  <section class="about" id="about">\
+    <h2>Over mij</h2>\
+    <p>\
+      Ik ben Loek Lutgens, een fotograaf en videomaker met een passie voor minimalisme, natuur en het vastleggen van het menselijke moment. Mijn werk draait om eenvoud, sfeer en het vertellen van een visueel verhaal.\
+    </p>\
+  </section>\
+\
+  <!-- CONTACT -->\
+  <footer class="contact" id="contact">\
+    <div>\
+      <a href="mailto:loek@email.com">loek@email.com</a> \'b7 \
+      <a href="tel:+31612345678">+31 6 12345678</a> \'b7 \
+      <a href="https://instagram.com/loeklutgens" target="_blank" rel="noopener">Instagram</a>\
+    </div>\
+    <div style="margin-top:1em; color:var(--muted); font-size:0.9em;">\
+      &copy; 2024 Loek Lutgens\
+    </div>\
+  </footer>\
+\
+  <!-- STICKY BUTTONS (voorbeeld: scroll naar boven) -->\
+  <button class="sticky-btn" id="scrollTopBtn" aria-label="Scroll naar boven" title="Scroll naar boven">&#8593;</button>\
+\
+  <script>\
+    // Smooth scroll naar boven\
+    document.getElementById('scrollTopBtn').onclick = () => \{\
+      window.scrollTo(\{top: 0, behavior: 'smooth'\});\
+    \};\
+\
+    // Portfolio video hover: speel af bij hover, pauzeer bij verlaten\
+    document.querySelectorAll('.portfolio-item video').forEach(video => \{\
+      video.addEventListener('mouseenter', () => \{ video.play(); \});\
+      video.addEventListener('mouseleave', () => \{ video.pause(); video.currentTime = 0; \});\
+    \});\
+\
+    // Sticky button tonen/verbergen\
+    const btn = document.getElementById('scrollTopBtn');\
+    window.addEventListener('scroll', () => \{\
+      btn.style.display = (window.scrollY > window.innerHeight * 0.5) ? 'flex' : 'none';\
+    \});\
+    btn.style.display = 'none';\
+  </script>\
+</body>\
+</html>\
+}
